@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <form method="post" action="{% url 'calculate_bmi' %}">
+        {% csrf_token %}
+        <label for="weight">Weight (kg):</label>
+        <input type="text" name="weight" required>
+
+        <label for="height">Height (cm):</label>
+        <input type="text" name="height" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
